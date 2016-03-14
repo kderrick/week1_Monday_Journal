@@ -5,5 +5,5 @@ prompt.start();
 
 prompt.get('userInput', function(err, results) {
   var result = JournalEntry(results.userInput);
-  console.log(result)
+  console.log(result);
 });
