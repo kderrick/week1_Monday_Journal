@@ -1,9 +1,9 @@
 var JournalEntry = require('./journal-entry.js').JournalEntry;
-// var wordCount = require('./journal-entry.js').wordCount
+var prompt = require('prompt');
+var moment = require ('moment');
+prompt.start();
 
-var outputTitle = prompt('Please enter a title for your entry');
-var outputEntry = prompt('Please enter your entry');
-var numberCount = outputEntry.wordCount();
-
-console.log(outputTitle, outputEntry);
-console.log(numberCount);
+prompt.get('userInput', function(err, results) {
+  var result = JournalEntry(results.userInput);
+  console.log(result)
+});
